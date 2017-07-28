@@ -14,7 +14,8 @@ let sum = 0;
      sum = sum + data[i].price;
   }
   let avg = sum/data.length;
-  return avg;
+  let rAvg = Math.round(avg * 100) / 100
+  console.log("The average price is $" + rAvg);
 }
 
 
@@ -25,10 +26,10 @@ function question2 () {
   let mediumCost = [];
   for ( let i = 0; i < data.length; i++){
       if(data[i].price > 14 && data[i].price < 18){
-        mediumCost.push(data[i].price);
+        mediumCost.push(data[i]);
       }
   }
-  return mediumCost;
+  console.log(mediumCost);
 }
 
 
@@ -42,9 +43,9 @@ function question3 () {
         itemGBP = data[i];
       }
   }
-  itemGBP.price;
-  itemGBP.title;
-  return itemGBP;
+  // itemGBP.price;
+  // itemGBP.title;
+  console.log(itemGBP.title + " costs " + itemGBP.price + " pounds.");
 }
 
 
