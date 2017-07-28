@@ -56,9 +56,12 @@ function question4 () {
   let woodItems = [];
   for ( let i = 0; i < data.length; i++){
      for ( let n = 0; n < data[i].materials.length; n++){
-         if(data[i].material[n] === "wood"){
+      //  if(data[i].materials)
+      //   console.log(data[i].title);
+
+         if(data[i].materials[n] === "wood"){
          woodItems.push(data[i]);
-         console.log(data[i].title);
+        //  console.log(data[i].title);
          }
       }
     }
@@ -66,7 +69,6 @@ function question4 () {
    for ( let o = 0; o < woodItems.length; o++){
    console.log(woodItems[o].title + " is made of wood.");
    }
-  //  console.log("someThing");
   }
 
 
