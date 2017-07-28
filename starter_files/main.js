@@ -94,4 +94,12 @@ function question5 () {
 // Answer:
 function question6 () {
   // Answer:
+  let whoMade = [];
+  for ( let i = 0; i < data.length; i++){
+         if(data[i].who_made === "i_did"){
+         whoMade.push(data[i]);
+         }
+   }
+
+   console.log(whoMade.length + " items were made by their sellers.");
 }
