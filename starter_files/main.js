@@ -15,7 +15,7 @@ let sum = 0;
   }
   let avg = sum/data.length;
   let rAvg = Math.round(avg * 100) / 100
-  console.log("The average price is $" + rAvg);
+  return console.log("The average price is $" + rAvg);
 }
 
 
@@ -26,10 +26,10 @@ function question2 () {
   let mediumCost = [];
   for ( let i = 0; i < data.length; i++){
       if(data[i].price > 14 && data[i].price < 18){
-        mediumCost.push(data[i]);
+        mediumCost.push(data[i].title);
       }
   }
-  console.log(mediumCost);
+  return console.log(mediumCost.join('\r\n'));
 }
 
 
@@ -45,23 +45,28 @@ function question3 () {
   }
   // itemGBP.price;
   // itemGBP.title;
-  console.log(itemGBP.title + " costs " + itemGBP.price + " pounds.");
+  return console.log(itemGBP.title + " costs " + itemGBP.price + " pounds.");
 }
 
 
 // 4: Display a list of all items who are made of wood.
 function question4 () {
   // Answer:
-
+  // This collects the wood items in an array.
   let woodItems = [];
   for ( let i = 0; i < data.length; i++){
-     for ( let n = 0; n < data[i].materials; n++){
+     for ( let n = 0; n < data[i].materials.length; n++){
          if(data[i].material[n] === "wood"){
          woodItems.push(data[i]);
+         console.log(data[i].title);
          }
       }
     }
-    return woodItems;
+  //  This prints the wood item titles.
+   for ( let o = 0; o < woodItems.length; o++){
+   console.log(woodItems[o].title + " is made of wood.");
+   }
+  //  console.log("someThing");
   }
 
 
