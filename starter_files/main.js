@@ -25,7 +25,7 @@ function question2 () {
   // Answer:
   let mediumCost = [];
   for ( let i = 0; i < data.length; i++){
-      if(data[i].price > 14 && data[i].price < 18){
+      if(data[i].price >= 14 && data[i].price <= 18){
         mediumCost.push(data[i].title);
       }
   }
