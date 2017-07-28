@@ -61,7 +61,7 @@ function question4 () {
 
          if(data[i].materials[n] === "wood"){
          woodItems.push(data[i]);
-        //  console.log(data[i].title);
+        //  console.log(data[i].title + " is made of wood.");
          }
       }
     }
@@ -76,6 +76,17 @@ function question4 () {
 //    Display the name, number of items and the items it is made of.
 function question5 () {
   // Answer:
+  let aboveEight = [];
+  for ( let i = 0; i < data.length; i++){
+         if(data[i].materials.length >= 8){
+         aboveEight.push(data[i]);
+         }
+    }
+    //  console.log(data[i].title + " is made of wood.");
+    for ( let o = 0; o < aboveEight.length; o++){
+    console.log(aboveEight[o].title + " has " + aboveEight[o].materials.length + " materials.");
+    console.log(aboveEight[o].materials.join('\r\n'));
+    }
 }
 
 
